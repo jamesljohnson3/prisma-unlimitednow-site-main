@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="assets/img/logo.png" />
+  <meta name="robots" content="noindex" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="keywords" content="Unlimit Potential®">
+  <meta name="author" content="Unlimit Potential®">
+  <meta name="robots" content="Unlimit Potential®">
+  <meta name="description" content="Unlimit Potential®">
+  <meta property="og:description" content="Unlimit Potential®">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Unlimit Potential®">
+  <meta property="og:type" content="Save time and money">
+  <meta property="og:url" content="https://unlimitpotential.com/">
+  <meta property="og:image" content="https://unlimitpotential.com/assets/images/favicon.png">
+  
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+ <!-- Automatically handle auth callback using Magic! -->
+
+ <script
+ src="https://auth.magic.link/pnp/callback"
+ data-magic-publishable-api-key="pk_live_B7016E2673013450">
+ 
+</script>
+
+<!-- Use data from Magic! -->
+
+<script>
+ window.addEventListener('@magic/ready', (e) => {
+   const { idToken, userMetadata, oauth } = e.detail;
+
+   const idTokenEl = document.getElementById('idToken');
+   const userMetadataEl = document.getElementById('userMetadata');
+   const oauthEl = document.getElementById('oauth');
+
+   idTokenEl.innerText = JSON.stringify(idToken, null, 2);
+   userMetadataEl.innerText = JSON.stringify(userMetadata, null, 2);
+   oauthEl.innerText = JSON.stringify(oauth, null, 2);
+ });
+</script>
+
+
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<!-- UI implementation -->
+
+
+
+  <title>My Site</title>
+  <script>
+    window.beOpAsyncInit = function() {
+      BeOpSDK.init({
+        account: "6272ee136426427a31338ffb"
+      });
+      BeOpSDK.watch();
+    };
+  </script>
+  <script async src="https://widget.beop.io/sdk.js"></script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_6OlWmX09EvTXC4ocQWti5B2GvvGkIxu8YbsFvxoOfqZ',{api_host:'https://app.posthog.com'})
+</script>
+
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+  heap.load("859168378");
+</script>
+
+
+</head>
+<div  data-run-module="local/bodyDesktop.init"  data-run-module-isrun="1"  class="div" ><RawImg  border="0"  image="https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512"  class="raw-img"  data-name="raw-img" ></RawImg>
+  <div  aria-modal="true"  role="dialog"  aria-labelledby="cmpboxheadline1"  data-nosnippet=""  class="div-2" ></div>
+  <header  class="header" ><section  class="section" ><div  class="div-3" ><div  class="div-4" ><a  aria-label="Naslovna strana"  href="https://unlimipotential.com/prici"  class="a" ><div  class="div-5" ><picture ><source  srcset="https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=86 86w"  type="image/webp"  />
+  <img  loading="lazy"  src="https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=100"  sizes="(max-width: 638px) 14vw, (max-width: 998px) 11vw, 8vw"  srcset="https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=86 86w"  class="image"  /></picture>
+  <div  class="builder-image-sizer image-sizer" ></div></div></a></div>
+  <div  class="div-6" ><form  method="GET"  action="/search"  data-run-module="local/desktop/search.init"  data-run-module-isrun="1"  class="form" ><input  type="search"  placeholder="Search templates"  name="q"  class="input"  />
+  <input  type="submit"  value="Go"  class="input-2"  /></form>
+  <div  data-run-module="local/common/sso.init"  data-device-type="desktop"  data-run-module-isrun="1"  class="div-7" ><a target="_blank" href="https://unlimitpotential.com/pricing"  class="a-2" ><p>Upgrade</p></a>
+  <div  class="div-8" ><div  class="div-9" ><h5  class="h5" >Blic nalog</h5>
+  <ul  class="ul" ><li  class="li" ><a  href="https://unlimitpotential.com/support"  class="a-3" ><span  class="span" ></span></a></li>
+  <li  class="li-2" ><a  href="https://unlimitpotential.com/pricing"  class="a-4" ><span  class="span" ></span></a></li></ul></div></div></div>
+  <div  class="div-10" ><a    rel="noopener"  href="https://unlimitednow.me"  class="a-5" ><p>Create Ads</p></a></div></div></div></section></header></div>
+  <div  class="div-11" ><div  code="<div x-data=&quot;{show: false}&quot; @click.away=&quot;show = false&quot;> <button @click=&quot;show = ! show&quot; class=&quot;mt-4 border-0 block bg-purple-600 bg-purple-600 text-gray-200 rounded-lg px-6 text-sm py-3 overflow-hidden focus:outline-none focus:border-white&quot;>\n            <div class=&quot;flex justify-between&quot;> <span>Dashboard</span> <svg class=&quot;fill-current text-gray-200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot;>\n                    <path d=&quot;M7 10l5 5 5-5z&quot; />\n                    <path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot; /></svg> </div>\n        </button>\n        <div x-show=&quot;show&quot; class=&quot;mt-2 py-2 bg-white rounded-lg shadow-xl&quot;> <a href=&quot;#&quot; class=&quot;block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white&quot;>Edit website</a> <a href=&quot;#&quot; class=&quot;block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white&quot;>My Feed</a> <a href=&quot;#&quot; class=&quot;block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white&quot;>Signout</a> </div>\n    </div>\n</div>"  class="custom-code" ><div ><div x-data="{show: false}" @click.away="show = false"> <button @click="show = ! show" class="mt-4 border-0 block bg-purple-600 bg-purple-600 text-gray-200 rounded-lg px-6 text-sm py-3 overflow-hidden focus:outline-none focus:border-white">
+              <div class="flex justify-between"> <span>Dashboard</span> <svg class="fill-current text-gray-200" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M7 10l5 5 5-5z" />
+                      <path d="M0 0h24v24H0z" fill="none" /></svg> </div>
+          </button>
+          <div x-show="show" class="mt-2 py-2 bg-white rounded-lg shadow-xl"> <a href="https://auth.unlimitednow.site/sign-in" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Edit Website</a> <a href="https://unlimitednow.me" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">My Feed</a> <a href="/logout" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Sign out</a> </div>
+      </div>
+  </div></div></div></div>
+  <div  class="div-12" ><div  class="div-13" ><div  class="div-14" ><h2  class="h2" >Create a new workspace</h2>
+  <div  class="div-15" >Workspaces are a shared space for your company.</div></div></div>
+  <form  class="form-2" ><div  class="div-16" ><div  class="div-17" ><div  code="<iframe id=&quot;softr-a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613-form1&quot; src=&quot;https://creators.unlimitpotential.com/embed/pages/a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613/blocks/form1&quot; width=&quot;100%&quot; height=&quot;1000&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none;&quot;></iframe>    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js&quot;></script>    <script> iFrameResize({ checkOrigin: false, log: true }, '#softr-a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613-form1');</script>"  class="custom-code-2" ><div ><iframe id="softr-a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613-form1" src="https://creators.unlimitpotential.com/embed/pages/a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613/blocks/form1" width="100%" height="1000" scrolling="no" frameborder="0" style="border:none;"></iframe>    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js"></script>    <script> iFrameResize({ checkOrigin: false, log: true }, '#softr-a8a2f4dc-a17d-478d-a3b2-a08e2ad3a613-form1');</script></div></div></div>
+  <div  class="div-18" ></div></div></form></div><style>.div { 
+  overflow-x: hidden;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  margin-top: -5px; }@media (max-width: 991px) { .div { 
+  display: none; } }@media (max-width: 640px) { .div { 
+  padding-left: 0px;
+  display: none; } }.raw-img { 
+  display: block;
+  height: 0px;
+  width: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  position: absolute; }.div-2 { 
+  border-radius: 3px;
+  border-top-left-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 5px solid rgb(207, 207, 207);
+  border-left: 0px solid rgb(255, 255, 255);
+  border-right: 0px solid rgb(255, 255, 255);
+  border-top: 12px solid rgb(192, 27, 94);
+  border-top-color: rgb(192, 27, 94);
+  border-top-style: solid;
+  border-top-width: 12px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  height: 70vh;
+  max-height: 100%;
+  width: 80%;
+  top: 0px;
+  transform: translate(-50%, 0px);
+  left: 50%;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px 0px;
+  font-family: Arial, sans-serif;
+  max-width: 100vw;
+  position: fixed;
+  transition-duration: 0.9s;
+  transition-property: background-color, height, width, max-height, max-width, display, position, left, top, bottom, right, transform;
+  z-index: 9999999;
+  border-color: rgb(192, 27, 94) rgb(255, 255, 255) rgb(207, 207, 207);
+  border-style: solid;
+  display: none; }@media (max-width: 991px) { .div-2 { 
+  bottom: 0px;
+  height: calc(100vh - 100px);
+  left: 0px;
+  top: auto;
+  transform: translate(0px, 0px);
+  width: 100%; } }@media (max-width: 640px) { .div-2 { 
+  max-width: 100%;
+  min-width: 100%;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  min-height: 300px;
+  line-height: 1.05em; } }.header { 
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.section { 
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  height: 124px; }@media (max-width: 640px) { .section { 
+  margin-right: 90px;
+  padding-left: 5px; } }.div-3 { 
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 1140px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 124px; }@media (max-width: 640px) { .div-3 { 
+  width: auto;
+  align-self: stretch;
+  max-width: 177px;
+  padding-left: 0px;
+  padding-right: 0px; } }.div-4 { 
+  width: 100px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.a { 
+  transition: all 300ms ease 0s;
+  transition-duration: 300ms;
+  display: flex;
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  border-bottom: 0px;
+  border-color: rgb(33, 37, 41);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+  pointer-events: auto; }.div-5 { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  min-height: 20px;
+  min-width: 20px;
+  overflow: hidden; }@media (max-width: 640px) { .div-5 { 
+  margin-top: 1px;
+  width: 266%;
+  padding-left: 0px;
+  margin-left: 4px;
+  margin-right: 8px;
+  padding-right: 0px; } }.image { 
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }.image-sizer { 
+  width: 100%;
+  padding-top: 100%;
+  pointer-events: none;
+  font-size: 0; }.div-6 { 
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.form { 
+  display: flex;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.input { 
+  background-color: rgb(238, 238, 238);
+  border-radius: 20px 0px 0px 20px;
+  border-top-left-radius: 20px;
+  height: 35px;
+  left: 20px;
+  padding-left: 12px;
+  padding-right: 24px;
+  position: relative;
+  z-index: 1;
+  border-bottom: 0px;
+  border-color: rgb(0, 0, 0);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }@media (max-width: 640px) { .input { 
+  width: 130px;
+  padding-left: 16px;
+  margin-left: 34px; } }.input-2 { 
+  background-color: rgba(131, 38, 239, 1);
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  height: 25px;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100px;
+  z-index: 2;
+  border-bottom: 0px;
+  border-color: rgb(255, 255, 255);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.div-7 { 
+  width: 90px;
+  margin-left: 15px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.a-2 { 
+  transition: all 300ms ease 0s;
+  transition-duration: 300ms;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  border-bottom: 0px;
+  border-color: rgb(33, 37, 41);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 12px;
+  margin-left: 3px;
+  text-transform: uppercase; }.div-8 { 
+  display: none;
+  left: -10px;
+  padding-top: 20px;
+  position: absolute;
+  top: 17px;
+  width: max-content;
+  z-index: 100;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.div-9 { 
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom-color: rgb(238, 238, 238);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgb(238, 238, 238);
+  border-left: 1px solid rgb(238, 238, 238);
+  border-left-color: rgb(238, 238, 238);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right: 1px solid rgb(238, 238, 238);
+  border-right-color: rgb(238, 238, 238);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top: 1px solid rgb(238, 238, 238);
+  border-top-color: rgb(238, 238, 238);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-width: 1px;
+  width: 200px; }.h5 { 
+  color: rgb(130, 130, 130);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-weight: 500;
+  border-bottom: 0px;
+  border-color: rgb(130, 130, 130);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.ul { 
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  list-style-type: none;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.li { 
+  padding-bottom: 20px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.a-3 { 
+  transition: all 300ms ease 0s;
+  transition-duration: 300ms;
+  align-items: center;
+  display: flex;
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  border-bottom: 0px;
+  border-color: rgb(33, 37, 41);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+  pointer-events: auto; }.span { 
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  border-radius: 50%;
+  border-top-left-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  margin-right: 10px;
+  width: 32px;
+  font-size: 12px;
+  margin-left: 3px;
+  text-transform: uppercase;
+  border-bottom: 0px;
+  border-color: rgb(0, 0, 0);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.li-2 { 
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.a-4 { 
+  transition: all 300ms ease 0s;
+  transition-duration: 300ms;
+  align-items: center;
+  display: flex;
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  border-bottom: 0px;
+  border-color: rgb(33, 37, 41);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+  pointer-events: auto; }.div-10 { 
+  background-color: rgb(255, 227, 255);
+  margin-left: 15px;
+  position: relative;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px; }.a-5 { 
+  transition: all 300ms ease 0s;
+  transition-duration: 300ms;
+  color: rgb(205, 64, 167);
+  display: flex;
+  font-size: 12px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 0px;
+  border-color: rgb(205, 64, 167);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  cursor: pointer;
+  pointer-events: auto; }.div-11 { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 0px;
+  height: 84px;
+  margin-bottom: 15px; }.custom-code { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto; }.div-12 { 
+  width: 99%;
+  flex-direction: column;
+  display: flex;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px; }.div-13 { 
+  flex-direction: column;
+  display: flex;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224); }.div-14 { 
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224); }.h2 { 
+  color: rgb(38, 38, 38);
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224); }.div-15 { 
+  margin-top: 4px;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224);
+  max-width: 80%;
+  color: rgba(38, 38, 38, 0.7);
+  font-size: 14px; }.form-2 { 
+  margin-top: 24px;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224);
+  display: block; }.div-16 { 
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224); }.div-17 { 
+  width: 100%;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  flex-direction: column;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 2px 4px -2px, rgba(67, 90, 111, 0.3) 0px 0px 1px 0px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-width: 1px;
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224);
+  height: auto;
+  flex-grow: 0; }.custom-code-2 { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px; }.div-18 { 
+  margin-top: 24px;
+  width: 83.3333%;
+  border-bottom: 0px solid rgb(206, 217, 224);
+  border-bottom-color: rgb(206, 217, 224);
+  border-left: 0px solid rgb(206, 217, 224);
+  border-left-color: rgb(206, 217, 224);
+  border-right: 0px solid rgb(206, 217, 224);
+  border-right-color: rgb(206, 217, 224);
+  border-top: 0px solid rgb(206, 217, 224);
+  border-top-color: rgb(206, 217, 224); }</style>
+        <script>
+        (() => {
+          const state = {};
+          
+          let nodesToDestroy = [];
+          let pendingUpdate = false;
+          
+  
+          function destroyAnyNodes() {
+            // destroy current view template refs before rendering again
+            nodesToDestroy.forEach(el => el.remove());
+            nodesToDestroy = [];
+          }
+          
+          
+          // Function to update data bindings and loops
+          // call update() when you mutate state and need the updates to reflect
+          // in the dom
+          function update() {
+            if (pendingUpdate === true) {
+              return;
+            }
+            pendingUpdate = true;
+            
+                document.querySelectorAll("[data-name='raw-img']").forEach((el) => {
+                  
+              
+          
+          
+              ;el.setAttribute("height", 1500);
+      
+              
+              
+              ;el.setAttribute("width", 1500);
+      
+              
+                });
+              
+  
+            destroyAnyNodes();
+  
+            
+  
+            pendingUpdate = false;
+          }
+  
+          
+  
+          // Update with initial state on first load
+          update();
+          
+  
+          
+  
+          
+  
+          
+          // Helper text DOM nodes
+          function renderTextNode(el, text) {
+            const textNode = document.createTextNode(text);
+            if (el?.scope) {
+              textNode.scope = el.scope
+            }
+            el.after(textNode);
+            nodesToDestroy.push(el.nextSibling);
+          }
+          
+        })()
+        </script>
+      
+
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+</body>
+
+
+
+<div class="row"><iframe id="softr-a0542ce1-ad0b-4ed6-a64e-d84e65ce553b-form2" src="https://creators.unlimitpotential.com/embed/pages/a0542ce1-ad0b-4ed6-a64e-d84e65ce553b/blocks/form2" width="100%" height="300" scrolling="no" frameborder="0" style="border:none;"></iframe>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js"></script>
+<script> iFrameResize({ checkOrigin: false, log: true }, '#softr-a0542ce1-ad0b-4ed6-a64e-d84e65ce553b-form2');</script>
+
+
+<script>
+(function(d, params){
+  const script = d.createElement('script');
+  script.setAttribute('src', 'https://cdn.candu.ai/sdk/latest/candu.umd.js?token=' + params.clientToken);
+  script.onload = () => Candu.init(params);
+  d.head.appendChild(script);
+})(document, {
+  // OPTIONAL: Provide your userId
+  // userId: 'YOUR_USER_ID',
+  clientToken: 'ki6w6rSFwb',
+ });
+</script>
+
+
+<div
+  code='<div class="div22" data-name="div-1">\n  <section class="section">\n    <div class="page">\n      <div class="data">\n        <label>window.Magic.user.getIdToken()</label>\n        <pre id="idToken">Loading...</pre>\n      </div>\n\n      <div class="data">\n        <label>window.Magic.user.getMetadata()</label>\n        <pre id="userMetadata">Loading...</pre>\n      </div>\n\n      <div class="data">\n        <label>window.Magic.oauth.getRedirectResult()</label>\n        <pre id="oauth">Loading...</pre>\n      </div>\n\n      <a href="/logout">Logout</a>\n    </div>\n  </section>\n</div>\n'
+  class="div"
+>
+  <div>
+    <div class="div22" data-name="div-1">
+      <section class="section">
+        <div class="page">
+          <div class="data">
+            <label>window.Magic.user.getIdToken()</label>
+            <pre id="idToken">Loading...</pre>
+          </div>
+
+          <div class="data">
+            <label>window.Magic.user.getMetadata()</label>
+            <pre id="userMetadata">Loading...</pre>
+          </div>
+
+          <div class="data">
+            <label>window.Magic.oauth.getRedirectResult()</label>
+            <pre id="oauth">Loading...</pre>
+          </div>
+
+          <a href="/logout">Logout</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<style>
+  .div22 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+</style>
+
+
+
+<!-- Usetiful script start -->
+<script>
+  (function (w, d, s) {
+      var a = d.getElementsByTagName('head')[0];
+      var r = d.createElement('script');
+      r.async = 1;
+      r.src = s;
+      r.setAttribute('id', 'usetifulScript');
+      r.dataset.token = "abcecf8b909c4322891887f838c08e3e";
+                          a.appendChild(r);
+    })(window, document, "https://www.usetiful.com/dist/usetiful.js");</script>
+  
+  <!-- Usetiful script end -->
+  
+
+<script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBzgmpA3LqTd6j0L0R6METr_4PYrX2xGak",
+  authDomain: "unlimited-now.firebaseapp.com",
+  projectId: "unlimited-now",
+  storageBucket: "unlimited-now.appspot.com",
+  messagingSenderId: "595700508262",
+  appId: "1:595700508262:web:3be529489056c3558eafa7",
+  measurementId: "G-VRPRC21J10"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+window.OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+  OneSignal.init({
+    appId: "0c071a6f-d3c8-4feb-b878-7450a2f96e11",
+    safari_web_id: "",
+    notifyButton: {
+      enable: true,
+    },
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

@@ -1,0 +1,47 @@
+/*
+Error: Invalid CSS after "    padding: math": expected ";", was ".div($grid-unit..."
+        on line 48 of /Users/directortrey/Desktop/_root/Unlimited Now/features/dashbooard/lillie ai/src/styling/components/form.scss
+
+43: }
+44: 
+45: input[type="submit"], input[type="file"], input[type="text"], input[type="password"], input:not([type]), select, textarea {
+46:     border: 1px solid $soft-border;
+47:     height: $touch-target;
+48:     padding: math.div($grid-unit, 1.5);
+49:     border-radius: $border-radius-round;
+50:     outline: none;
+51:     font-size: 15px;
+52: }
+53: 
+
+Backtrace:
+/Users/directortrey/Desktop/_root/Unlimited Now/features/dashbooard/lillie ai/src/styling/components/form.scss:48
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    padding: math\": expected \";\", was \".div($grid-unit...\"\A         on line 48 of /Users/directortrey/Desktop/_root/Unlimited Now/features/dashbooard/lillie ai/src/styling/components/form.scss\A \A 43: }\A 44: \A 45: input[type=\"submit\"], input[type=\"file\"], input[type=\"text\"], input[type=\"password\"], input:not([type]), select, textarea {\A 46:     border: 1px solid $soft-border;\A 47:     height: $touch-target;\A 48:     padding: math.div($grid-unit, 1.5);\A 49:     border-radius: $border-radius-round;\A 50:     outline: none;\A 51:     font-size: 15px;\A 52: }\A 53: "; }

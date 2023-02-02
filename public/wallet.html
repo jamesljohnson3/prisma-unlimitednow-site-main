@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex" />
+
+  <title>Get started</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+<!-- Automatically handle auth callback using Magic! -->
+
+<script
+src="https://auth.magic.link/pnp/callback"
+data-magic-publishable-api-key="pk_live_B7016E2673013450">
+</script>
+
+<!-- Use data from Magic! -->
+
+<script>
+window.addEventListener('@magic/ready', (e) => {
+  const { idToken, userMetadata, oauth } = e.detail;
+
+  const idTokenEl = document.getElementById('idToken');
+  const userMetadataEl = document.getElementById('userMetadata');
+  const oauthEl = document.getElementById('oauth');
+
+  idTokenEl.innerText = JSON.stringify(idToken, null, 2);
+  userMetadataEl.innerText = JSON.stringify(userMetadata, null, 2);
+  oauthEl.innerText = JSON.stringify(oauth, null, 2);
+});
+</script>
+
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_6OlWmX09EvTXC4ocQWti5B2GvvGkIxu8YbsFvxoOfqZ',{api_host:'https://app.posthog.com'})
+</script>
+
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+  heap.load("859168378");
+</script>
+
+</head>
+<body>
+  <div class="container-scroller">
+    <div class="row p-0 m-0 proBanner" id="proBanner">
+      <div class="col-md-12 p-0 m-0">
+        <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
+          <div class="ps-lg-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with your site!</p>
+              <a href="https://www.unlimitpotential.com/pricing"  target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="https://www.unlimitpotential.com/pricing" ><i class="mdi mdi-home me-3 text-white"></i></a>
+            <button id="bannerClose" class="btn border-0 p-0">
+              <i class="mdi mdi-close text-white me-0"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="https://unlimitednow.me/">
+            <img src="images/dino-error.png" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="https://unlimitednow.me/">
+            <img src="images/dino-error.png" alt="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text">Lillie <span class="text-black fw-bold">Ai</span></h1>
+            <h3 class="welcome-sub-text">Dashboard </h3>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown d-none d-lg-block">
+            <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Switch Mod </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+              <a class="dropdown-item py-3" >
+                <p class="mb-0 font-weight-medium float-left">Switch Modifications</p>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Business Intelligent Dashboards </p>
+                  <p class="fw-light small-text mb-0">For Full Stack Web Development AI Assisted</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Business Intelligent Dashboards</p>
+                  <p class="fw-light small-text mb-0">For Content Creation and Lead Generation</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Business Intelligent Dashboards</p>
+                  <p class="fw-light small-text mb-0"> For Finding and Recruiting Sellers, Creators or Influencers</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Business Intelligent Dashboards</p>
+                  <p class="fw-light small-text mb-0">Content Management and Vendor/Customer Relationship</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          
+          <li class="nav-item d-none d-lg-block">
+            <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <span class="icon-calendar input-group-text calendar-icon"></span>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </li>
+          <li class="nav-item">
+            <form class="search-form" action="#">
+              <i class="icon-search"></i>
+              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+            </form>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="icon-mail icon-lg"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item py-3 border-bottom">
+                <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
+                <span class="badge badge-pill badge-primary float-right">View all</span>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-alert m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">Application Error</h6>
+                  <p class="fw-light small-text mb-0"> Just now </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-settings m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">Settings</h6>
+                  <p class="fw-light small-text mb-0"> Private message </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-airballoon m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">New user registration</h6>
+                  <p class="fw-light small-text mb-0"> 2 days ago </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-bell"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+              <a class="dropdown-item py-3">
+                <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                <span class="badge badge-pill badge-primary float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
+                  <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                  <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                  <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="Profile image"> </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="images/faces/face8.jpg" alt="Profile image">
+                <p class="mb-1 mt-3 font-weight-semibold">Contact us</p>
+                <p class="fw-light text-muted mb-0">support@unlimitpotential.com</p>
+              </div>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
+              <a class="dropdown-item"a href="/logout"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 fw-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 fw-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://unlimitednow.me/">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">Create</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi mdi-floor-plan"></i>
+              <span class="menu-title">Creator</span>
+              <i class="menu-arrow"></i> 
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Create Ads</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Create Contracts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Create Websites</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">Forms and Datas</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="menu-icon mdi mdi-card-text-outline"></i>
+              <span class="menu-title">Form elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="menu-icon mdi mdi-chart-line"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="menu-icon mdi mdi-table"></i>
+              <span class="menu-title">Tables</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="menu-icon mdi mdi-layers-outline"></i>
+              <span class="menu-title">Icons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">pages</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">help</li>
+          <li class="nav-item">
+            <a class="nav-link"  target="_blank" href="https://unlimitednow.stoplight.io/">
+              <i class="menu-icon mdi mdi-file-document"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active ps-0" id="home-tab"  href="https://unlimitednow.me/" role="tab" aria-controls="overview" aria-selected="true">Memories</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab" aria-selected="false">Quick Install</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab"  href="https://my.unlimitednow.site/launch" role="tab" aria-selected="false">View Templates</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border-0" id="more-tab" href="https://unlimitednow.me/more" role="tab" aria-selected="false">More</a>
+                    </li>
+                  </ul>
+                  <div>
+                    <div class="btn-wrapper">
+                      <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                      <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="statistics-details d-flex align-items-center justify-content-between">
+                          <div>
+                            <p class="statistics-title">Bounce Rate</p>
+                            <h3 class="rate-percentage">32.53%</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
+                          </div>
+                          <div>
+                            <p class="statistics-title">Page Views</p>
+                            <h3 class="rate-percentage">7,682</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span></p>
+                          </div>
+                          <div>
+                            <p class="statistics-title">New Sessions</p>
+                            <h3 class="rate-percentage">68.8</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Avg. Time on Site</p>
+                            <h3 class="rate-percentage">2m:35s</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">New Sessions</p>
+                            <h3 class="rate-percentage">68.8</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Avg. Time on Site</p>
+                            <h3 class="rate-percentage">2m:35s</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="https://unlimitednow.me/" class="c"><span class="spanc">Create ads</span><a href="https://unlimitednow.live/userdashboardfinal" class="c"><span class="spanc">Go live</span></a><a href="https://my.unlimitednow.site/launch/" class="c"><span class="spanc">My Site</span></a><a href="https://connect.stripe.com/express/oauth/authorize?response_type=code&client_id=ca_LsmBxC6Daetmvv6f4ybRjJlfWEwgfAI9"target="_blank" class="c"><span class="spanc">Get Paid by Unlimit Potential</span></a><a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_LsmBxC6Daetmvv6f4ybRjJlfWEwgfAI9&scope=read_write"target="_blank" class="c"><span class="spanc">Connect your stripe</span></a><a href="https://unlimitednow.app.link/pay"target="_blank" class="c"><span class="spanc">My Payments</span></a><a href="https://unlimitednow.me/wallet/"target="_blank" class="c"><span class="spanc">My Wallet</span></a>
+</a>
+<style>
+  
+  .c {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0;
+    height: auto;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    flex-grow: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    text-decoration: none;
+  }
+  .spanc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    appearance: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgba(131, 38, 239, 1);
+    color: white;
+    border-radius: 83px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+    text-decoration: none;
+  }
+</style>
+
+                    </div> 
+                    <div class="row">
+                      <div class="col-lg-8 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <div>
+                                   <h4 class="card-title card-title-dash">Performance Line Chart</h4>
+                                   <h5 class="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
+                                  </div>
+                                  <div id="performance-line-legend"></div>
+                                </div>
+                                <div class="chartjs-wrapper mt-5">
+                                  <canvas id="performaneLine"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                            <div class="card bg-primary card-rounded">
+                              <div class="card-body pb-0">
+                                <h4 class="card-title card-title-dash text-white mb-4">Status Summary</h4>
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <p class="status-summary-ight-white mb-1">Closed Value</p>
+                                    <h2 class="text-info">357</h2>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <div class="status-summary-chart-wrapper pb-4">
+                                      <canvas id="status-summary"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
+                                      <div class="circle-progress-width">
+                                        <div id="totalVisitors" class="progressbar-js-circle pr-2"></div>
+                                      </div>
+                                      <div>
+                                        <p class="text-small mb-2">Total Visitors</p>
+                                        <h4 class="mb-0 fw-bold">26.80%</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="circle-progress-width">
+                                        <div id="visitperday" class="progressbar-js-circle pr-2"></div>
+                                      </div>
+                                      <div>
+                                        <p class="text-small mb-2">Visits per day</p>
+                                        <h4 class="mb-0 fw-bold">9065</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-8 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <div>
+                                    <h4 class="card-title card-title-dash">Market Overview</h4>
+                                   <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                  </div>
+                                  <div>
+                                    <div class="dropdown">
+                                      <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This month </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <h6 class="dropdown-header">Settings</h6>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+                                  <div class="d-sm-flex align-items-center mt-4 justify-content-between"><h2 class="me-2 fw-bold">$36,2531.00</h2><h4 class="me-2">USD</h4><h4 class="text-success">(+1.37%)</h4></div>
+                                  <div class="me-3"><div id="marketing-overview-legend"></div></div>
+                                </div>
+                                <div class="chartjs-bar-wrapper mt-3">
+                                  <canvas id="marketingOverview"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded table-darkBGImg">
+                              <div class="card-body">
+                                <div class="col-sm-8">
+                                  <h3 class="text-white upgrade-info mb-0">
+                                    Enhance your <span class="fw-bold">Campaign</span> for better outreach
+                                  </h3>
+                                  <a href="#" class="btn btn-info upgrade-btn">Upgrade Account!</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <script src="https://auth.magic.link/sdk"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.11/dist/web3.min.js"></script>
+    <script>
+      /* Configure Ethereum provider */
+      const magic = new Magic("pk_live_B7016E2673013450", {
+        network: "rinkeby"
+      });
+      const web3 = new Web3(magic.rpcProvider);
+
+      /*  Smart contract values */
+      const contractABI =
+        '[{"constant":false,"inputs":[{"name":"newMessage","type":"string"}],"name":"update","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"message","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"initMessage","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]';
+      const contractByteCode =
+        "0x608060405234801561001057600080fd5b5060405161047f38038061047f8339818101604052602081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b5050929190505050806000908051906020019061009c9291906100a3565b5050610148565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100e457805160ff1916838001178555610112565b82800160010185558215610112579182015b828111156101115782518255916020019190600101906100f6565b5b50905061011f9190610123565b5090565b61014591905b80821115610141576000816000905550600101610129565b5090565b90565b610328806101576000396000f3fe608060405234801561001057600080fd5b5060043610610053576000357c0100000000000000000000000000000000000000000000000000000000900480633d7403a314610058578063e21f37ce14610113575b600080fd5b6101116004803603602081101561006e57600080fd5b810190808035906020019064010000000081111561008b57600080fd5b82018360208201111561009d57600080fd5b803590602001918460018302840111640100000000831117156100bf57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610196565b005b61011b6101b0565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561015b578082015181840152602081019050610140565b50505050905090810190601f1680156101885780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b80600090805190602001906101ac92919061024e565b5050565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102465780601f1061021b57610100808354040283529160200191610246565b820191906000526020600020905b81548152906001019060200180831161022957829003601f168201915b505050505081565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061028f57805160ff19168380011785556102bd565b828001600101855582156102bd579182015b828111156102bc5782518255916020019190600101906102a1565b5b5090506102ca91906102ce565b5090565b6102f091905b808211156102ec5760008160009055506001016102d4565b5090565b9056fea265627a7a7230582003ae1ef5a63bf058bfd2b31398bdee39d3cbfbb7fbf84235f4bc2ec352ee810f64736f6c634300050a0032";
+      let contractAddress = "0x8b211dfebf490a648f6de859dfbed61fa22f35e0";
+
+      const render = async () => {
+        const isLoggedIn = await magic.user.isLoggedIn();
+        /* Show login form if user is not logged in */
+        let authHtml = `
+          <div class="container">
+            <h1>Please sign up or login</h1>
+            <form onsubmit="handleLogin(event)">
+              <input type="email" name="email" required="required" placeholder="Enter your email" />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        `;
+        let userHtml = "";
+        let txnHtml = "";
+        let signHtml = "";
+        let contractHtml = "";
+        const target = document.querySelector("#app");
+        if (isLoggedIn) {
+          /* Get user metadata including email */
+          const userMetadata = await magic.user.getMetadata();
+          const network = await web3.eth.net.getNetworkType();
+          const userAddress = (await web3.eth.getAccounts())[0];
+          const userBalance = web3.utils.fromWei(
+            await web3.eth.getBalance(userAddress) // Balance is in wei
+          );
+          authHtml = `
+            <div class="container">
+              <h1>Current user: ${userMetadata.email}</h1>
+              <button onclick="handleLogout()">Logout</button>
+            </div>
+          `;
+          userHtml = `
+            <div class="container">
+              <h1>Ethereum address</h1>
+              <div class="info">
+                <a href="https://rinkeby.etherscan.io/address/${userAddress}" target="_blank">${userAddress}</a>
+              </div>
+              <h1>Network</h1>
+              <div class="info">${network}</div>
+              <h1>Balance</h1>
+              <div class="info">${userBalance} ETH</div>
+            </div>
+          `;
+          txnHtml = `
+            <div class="container">
+              <h1>Send Transaction</h1>
+              <form onsubmit="handleSendTxn(event)">
+                <input type="text" name="destination" class="full-width" required="required" placeholder="Destination address" />
+                <input type="text" name="amount" class="full-width" required="required" placeholder="Amount in ETH" />
+                <button id="btn-send-txn" type="submit">Send Transaction</button>
+              </form>
+            </div>
+          `;
+          signHtml = `
+            <div class="container">
+              <h1>Sign Message</h1>
+              <form onsubmit="handleSignMsg(event)">
+                <input type="text" name="message" class="full-width" placeholder="Message" />
+                <button id="btn-sign-msg" type="submit">Sign Message</button>
+              </form>
+            </div>
+          `;
+          let contract = new web3.eth.Contract(
+            JSON.parse(contractABI),
+            contractAddress
+          );
+          const currentMessage = await contract.methods.message().call();
+          contractHtml = `
+            <div class="container">
+              <h1>Smart Contract</h1>
+              <div class="info">
+                <a href="https://rinkeby.etherscan.io/address/${contractAddress}" target="_blank">${contractAddress}</a>
+              </div>
+              <h1>Message</h1>
+              <div class="info">${currentMessage}</div>
+              <form onsubmit="handleUpdateMsg(event)">
+                <input type="text" name="new-message" class="full-width" required="required" placeholder="New Message" />
+                <button id="btn-deploy" onclick="handleDeploy()">New Contract</button>
+                <button id="btn-update-msg" type="submit">Update Message</button>
+              </form>
+            </div>
+          `;
+        }
+        target.innerHTML =
+          authHtml + userHtml + txnHtml + signHtml + contractHtml;
+      };
+
+      const handleLogin = async e => {
+        e.preventDefault();
+        const email = new FormData(e.target).get("email");
+        if (email) {
+          /* One-liner login 🤯 */
+          await magic.auth.loginWithMagicLink({ email });
+          render();
+        }
+      };
+
+      const handleSendTxn = async e => {
+        e.preventDefault();
+        const destination = new FormData(e.target).get("destination");
+        const amount = new FormData(e.target).get("amount");
+        if (destination && amount) {
+          const btnSendTxn = document.getElementById("btn-send-txn");
+          btnSendTxn.disabled = true;
+          btnSendTxn.innerText = "Sending...";
+          const fromAddress = (await web3.eth.getAccounts())[0];
+          // Submit transaction to the blockchain and wait for it to be mined
+          const receipt = await web3.eth.sendTransaction({
+            from: fromAddress,
+            to: destination,
+            value: web3.utils.toWei(amount)
+          });
+          console.log("Completed:", receipt);
+          render();
+        }
+      };
+
+      const handleSignMsg = async e => {
+        e.preventDefault();
+        const message = new FormData(e.target).get("message");
+        if (message) {
+          const userAddress = (await web3.eth.getAccounts())[0];
+          const signedMessage = await web3.eth.personal.sign(
+            message,
+            userAddress
+          );
+          alert(`Signed Message: ${signedMessage}`);
+          console.log(signedMessage);
+          /*const signerAddress = await web3.eth.personal.ecRecover(
+            message,
+            signedMessage
+          );
+          console.log(userAddress);
+          console.log(signerAddress);
+          console.log(signerAddress == userAddress);*/
+        }
+      };
+
+      const handleUpdateMsg = async e => {
+        e.preventDefault();
+        const newMessage = new FormData(e.target).get("new-message");
+        if (newMessage) {
+          const btnUpdateMsg = document.getElementById("btn-update-msg");
+          btnUpdateMsg.disabled = true;
+          btnUpdateMsg.innerText = "Updating...";
+          const fromAddress = (await web3.eth.getAccounts())[0];
+          const contract = new web3.eth.Contract(
+            JSON.parse(contractABI),
+            contractAddress
+          );
+          const receipt = await contract.methods
+            .update(newMessage)
+            .send({ from: fromAddress });
+          console.log("Completed:", receipt);
+          render();
+        }
+      };
+
+      const handleDeploy = async () => {
+        const btnDeploy = document.getElementById("btn-deploy");
+        btnDeploy.disabled = true;
+        btnDeploy.innerText = "Deploying...";
+        const fromAddress = (await web3.eth.getAccounts())[0];
+        const contract = new web3.eth.Contract(JSON.parse(contractABI));
+        const contractInstance = await contract
+          .deploy({
+            data: contractByteCode,
+            arguments: ["Hello World!"]
+          })
+          .send({
+            from: fromAddress
+          });
+        console.log("Completed:", contractInstance.options);
+        contractAddress = contractInstance.options.address;
+        render();
+      };
+
+      const handleLogout = async () => {
+        await magic.user.logout();
+        render();
+      };
+    </script>
+  </head>
+  <body onload="render()">
+    <div id="app">
+      <div class="container">Loading...</div>
+    </div>
+  </body>
+
+<div class="div" data-name="div-1">
+  <section class="section">
+    <p><strong>Unlimited Now, Inc.</strong></p>
+    <p>
+      <a
+        href="https://shop.unlimitednow.site/privacy-policy"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Privacy Policy
+      </a>
+    </p>
+  </section>
+</div>
+<style>
+  .div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    text-align: center;
+  }
+  .section {
+    width: 100%;
+    align-self: stretch;
+    flex-grow: 1;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      document.querySelectorAll("[data-name='div-1']").forEach((el) => {
+        el.maxWidth = 1200;
+      });
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
+</html>
+
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                      <h4 class="card-title card-title-dash">Type By Amount</h4>
+                                    </div>
+                                    <canvas class="my-auto" id="doughnutChart" height="200"></canvas>
+                                    <div id="doughnut-chart-legend" class="mt-5 text-center"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                      <div>
+                                        <h4 class="card-title card-title-dash">Leave Report</h4>
+                                      </div>
+                                      <div>
+                                        <div class="dropdown">
+                                          <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Month Wise </button>
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                            <h6 class="dropdown-header">week Wise</h6>
+                                            <a class="dropdown-item" href="#">Year Wise</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="mt-3">
+                                      <canvas id="leaveReport"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-lg-12">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                      <div>
+                                        <h4 class="card-title card-title-dash">Top Performer</h4>
+                                      </div>
+                                    </div>
+                                    <div class="mt-3">
+                                      <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                        <div class="d-flex">
+                                          <img class="img-sm rounded-10" src="images/faces/face1.jpg" alt="profile">
+                                          <div class="wrapper ms-3">
+                                            <p class="ms-1 mb-1 fw-bold">Brandon Washington</p>
+                                            <small class="text-muted mb-0">162543</small>
+                                          </div>
+                                        </div>
+                                        <div class="text-muted text-small">
+                                          1h ago
+                                        </div>
+                                      </div>
+                                      <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                        <div class="d-flex">
+                                          <img class="img-sm rounded-10" src="images/faces/face2.jpg" alt="profile">
+                                          <div class="wrapper ms-3">
+                                            <p class="ms-1 mb-1 fw-bold">Wayne Murphy</p>
+                                            <small class="text-muted mb-0">162543</small>
+                                          </div>
+                                        </div>
+                                        <div class="text-muted text-small">
+                                          1h ago
+                                        </div>
+                                      </div>
+                                      <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                        <div class="d-flex">
+                                          <img class="img-sm rounded-10" src="images/faces/face3.jpg" alt="profile">
+                                          <div class="wrapper ms-3">
+                                            <p class="ms-1 mb-1 fw-bold">Katherine Butler</p>
+                                            <small class="text-muted mb-0">162543</small>
+                                          </div>
+                                        </div>
+                                        <div class="text-muted text-small">
+                                          1h ago
+                                        </div>
+                                      </div>
+                                      <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                        <div class="d-flex">
+                                          <img class="img-sm rounded-10" src="images/faces/face4.jpg" alt="profile">
+                                          <div class="wrapper ms-3">
+                                            <p class="ms-1 mb-1 fw-bold">Matthew Bailey</p>
+                                            <small class="text-muted mb-0">162543</small>
+                                          </div>
+                                        </div>
+                                        <div class="text-muted text-small">
+                                          1h ago
+                                        </div>
+                                      </div>
+                                      <div class="wrapper d-flex align-items-center justify-content-between pt-2">
+                                        <div class="d-flex">
+                                          <img class="img-sm rounded-10" src="images/faces/face5.jpg" alt="profile">
+                                          <div class="wrapper ms-3">
+                                            <p class="ms-1 mb-1 fw-bold">Rafell John</p>
+                                            <small class="text-muted mb-0">Alaska, USA</small>
+                                          </div>
+                                        </div>
+                                        <div class="text-muted text-small">
+                                          1h ago
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+
+<!-- UI implementation -->
+
+<body>
+  <div class="page">
+    <div class="data">
+      <label>window.Magic.user.getIdToken()</label>
+      <pre id="idToken">Loading...</pre>
+    </div>
+
+    <div class="data">
+      <label>window.Magic.user.getMetadata()</label>
+      <pre id="userMetadata">Loading...</pre>
+    </div>
+
+    <div class="data">
+      <label>window.Magic.oauth.getRedirectResult()</label>
+      <pre id="oauth">Loading...</pre>
+    </div>
+
+    <a href="/logout">Logout</a>
+  </div>
+</body>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="vendors/progressbar.js/progressbar.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/jquery.cookie.js" type="text/javascript"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

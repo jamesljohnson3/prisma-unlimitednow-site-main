@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+
+  <meta name="theme-color" content="#000000" />
+  <meta name="keywords" content="Unlimit Potential®">
+  <meta name="author" content="Unlimit Potential®">
+  <meta name="robots" content="Unlimit Potential®">
+  <meta name="description" content="Unlimit Potential®">
+  <meta property="og:description" content="Unlimit Potential®">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Unlimit Potential®">
+  <meta property="og:type" content="Save time and money">
+  <meta property="og:url" content="https://unlimitpotential.com/">
+  <meta property="og:image" content="https://unlimitpotential.com/assets/images/favicon.png">
+  
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+ <!-- Automatically handle auth callback using Magic! -->
+
+ <script
+ src="https://auth.magic.link/pnp/callback"
+ data-magic-publishable-api-key="pk_live_B7016E2673013450">
+ 
+</script>
+
+<!-- Use data from Magic! -->
+
+<script>
+ window.addEventListener('@magic/ready', (e) => {
+   const { idToken, userMetadata, oauth } = e.detail;
+
+   const idTokenEl = document.getElementById('idToken');
+   const userMetadataEl = document.getElementById('userMetadata');
+   const oauthEl = document.getElementById('oauth');
+
+   idTokenEl.innerText = JSON.stringify(idToken, null, 2);
+   userMetadataEl.innerText = JSON.stringify(userMetadata, null, 2);
+   oauthEl.innerText = JSON.stringify(oauth, null, 2);
+ });
+</script>
+
+
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<!-- UI implementation -->
+
+
+
+  <title>Dashboard</title>
+  <script>
+    window.beOpAsyncInit = function() {
+      BeOpSDK.init({
+        account: "6272ee136426427a31338ffb"
+      });
+      BeOpSDK.watch();
+    };
+  </script>
+  <script async src="https://widget.beop.io/sdk.js"></script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_6OlWmX09EvTXC4ocQWti5B2GvvGkIxu8YbsFvxoOfqZ',{api_host:'https://app.posthog.com'})
+</script>
+
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+  heap.load("859168378");
+</script>
+
+
+
+</head>
+<body>
+  <div
+  data-run-module="local/bodyDesktop.init"
+  data-run-module-isrun="1"
+  class="div"
+>
+  <RawImg
+    border="0"
+    class="raw-img"
+  ></RawImg>
+  <div
+    aria-modal="true"
+    role="dialog"
+    aria-labelledby="cmpboxheadline1"
+    data-nosnippet=""
+    class="div-2"
+  ></div>
+  <header class="header">
+    <section class="section">
+      <div class="div-3">
+        <div class="div-4">
+          <a
+            aria-label="Naslovna strana"
+            class="a"
+          >
+            <div class="div-5">
+              <picture>
+                <source
+                  srcset="
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=100   100w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=200   200w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=400   400w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=800   800w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=1200 1200w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=1600 1600w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?format=webp&width=2000 2000w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512"
+                  srcset="
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=100   100w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=200   200w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=400   400w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=800   800w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=1200 1200w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=1600 1600w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512?width=2000 2000w,
+                    https://cdn.builder.io/api/v1/image/assets%2Ffc8480a6998e49d7af4ee889483a2619%2Ff61c560e2d724a08a16e79c9db363512
+                  "
+                  class="image"
+                  data-name="image"
+                />
+              </picture>
+              <div class="builder-image-sizer image-sizer"></div>
+            </div>
+          </a>
+        </div>
+        <div class="div-6">
+          <form
+            method="GET"
+            action="/search"
+            data-run-module="local/desktop/search.init"
+            data-run-module-isrun="1"
+            class="form"
+          >
+            <input
+              type="search"
+              placeholder="Search tools"
+              name="q"
+              class="input"
+            />
+            <input type="submit" value="Go" class="input-2" />
+          </form>
+          <div
+            data-run-module="local/common/sso.init"
+            data-device-type="desktop"
+            data-run-module-isrun="1"
+            class="div-7"
+          >
+            <a target="_blank"
+            rel="noopener" href="https://unlimitpotential.com/pricing" class="a-2">
+              <div
+                code='<svg class="icon sprite-user-regular" style="\n  display: inline-block;\n  height: 16px;\n  width: 16px;\n  border-bottom: 0px;\n  border-color: rgb(33, 37, 41);\n  border-left: 0px;\n  border-right: 0px;\n  border-top: 0px;">\n                                <use xlink:href="https://zena.blic.rs/sprite.svg#sprite-user-regular"></use>\n                            </svg>'
+                class="svg"
+              >
+                <div>
+                  <svg
+                    class="icon sprite-user-regular"
+                    style="
+                      display: inline-block;
+                      height: 16px;
+                      width: 16px;
+                      border-bottom: 0px;
+                      border-color: rgb(33, 37, 41);
+                      border-left: 0px;
+                      border-right: 0px;
+                      border-top: 0px;
+                    "
+                  >
+                    <use
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div
+                code='<svg\n  class="icon sprite-user-check-regular hidden"\n  style="\n  width: 20px;\n  display: none;\n  height: 16px;\n  border-bottom: 0px;\n  border-color: rgb(33, 37, 41);\n  border-left: 0px;\n  border-right: 0px;\n  border-top: 0px;"\n>\n  <use\n    xlink:href="https://zena.blic.rs/sprite.svg#sprite-user-check-regular"\n  ></use>\n</svg>\n'
+                class="svg-2"
+              >
+                <div>
+                  <svg
+                    class="icon sprite-user-check-regular hidden"
+                    style="
+                      width: 20px;
+                      display: none;
+                      height: 16px;
+                      border-bottom: 0px;
+                      border-color: rgb(33, 37, 41);
+                      border-left: 0px;
+                      border-right: 0px;
+                      border-top: 0px;
+                    "
+                  >
+                    <use
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <span class="span"><p>Pricing</p></span>
+            </a>
+            <div class="div-8">
+              <div class="div-9">
+                <ul class="ul">
+                  <li class="li">
+                      <span class="span-2">
+                        <div
+                          code='<svg\n  class="icon sprite-user-regular"\n  style="\n  display: inline-block;\n  height: 16px;\n  width: 16px;\n  border-bottom: 0px;\n  border-color: rgb(0, 0, 0);\n  border-left: 0px;\n  border-right: 0px;\n  border-top: 0px;"\n>\n  <use xlink:href="https://zena.blic.rs/sprite.svg#sprite-user-regular"></use>\n</svg>\n'
+                          class="svg-3"
+                        >
+                          <div>
+                            <svg
+                              class="icon sprite-user-regular"
+                              style="
+                                display: inline-block;
+                                height: 16px;
+                                width: 16px;
+                                border-bottom: 0px;
+                                border-color: rgb(0, 0, 0);
+                                border-left: 0px;
+                                border-right: 0px;
+                                border-top: 0px;
+                              "
+                            >
+                              <use
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="li-2">
+                      <span class="span-3">
+                        <div
+                          code='<svg\n  class="icon sprite-user-regular"\n  style="\n  display: inline-block;\n  height: 16px;\n  width: 16px;\n  border-bottom: 0px;\n  border-color: rgb(0, 0, 0);\n  border-left: 0px;\n  border-right: 0px;\n  border-top: 0px;"\n>\n  <use\n    xlink:href="https://zena.blic.rs/sprite.svg#sprite-sign-out-alt-regular"\n  ></use>\n</svg>\n'
+                          class="svg-4"
+                        >
+                          <div>
+                            <svg
+                              class="icon sprite-user-regular"
+                              style="
+                                display: inline-block;
+                                height: 16px;
+                                width: 16px;
+                                border-bottom: 0px;
+                                border-color: rgb(0, 0, 0);
+                                border-left: 0px;
+                                border-right: 0px;
+                                border-top: 0px;
+                              "
+                            >
+                              <use
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="div-10">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://unlimitpotential.com/support"
+              class="a-5"
+            >
+              <p>Help</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+</div>
+<style>
+  .div {
+    overflow-x: hidden;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .raw-img {
+    display: block;
+    height: 0px;
+    width: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    position: absolute;
+  }
+  .div-2 {
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(207, 207, 207);
+    border-left: 0px solid rgb(255, 255, 255);
+    border-right: 0px solid rgb(255, 255, 255);
+    border-top: 12px solid rgb(192, 27, 94);
+    border-top-color: rgb(192, 27, 94);
+    border-top-style: solid;
+    border-top-width: 12px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    height: 70vh;
+    max-height: 100%;
+    width: 80%;
+    top: 0px;
+    transform: translate(-50%, 0px);
+    left: 50%;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px 0px;
+    font-family: Arial, sans-serif;
+    max-width: 100vw;
+    position: fixed;
+    transition-duration: 0.9s;
+    transition-property: background-color, height, width, max-height, max-width,
+      display, position, left, top, bottom, right, transform;
+    z-index: 9999999;
+    border-color: rgb(192, 27, 94) rgb(255, 255, 255) rgb(207, 207, 207);
+    border-style: solid;
+    display: none;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      bottom: 0px;
+      height: calc(100vh - 100px);
+      left: 0px;
+      top: auto;
+      transform: translate(0px, 0px);
+      width: 100%;
+    }
+  }
+  @media (max-width: 640px) {
+    .div-2 {
+      max-width: 100%;
+      min-width: 100%;
+      overflow: auto;
+      overflow-x: auto;
+      overflow-y: auto;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      min-height: 300px;
+      line-height: 1.05em;
+    }
+  }
+  .header {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .section {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-3 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 1140px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (max-width: 640px) {
+    .div-3 {
+      width: auto;
+      align-self: stretch;
+      max-width: 177px;
+    }
+  }
+  .div-4 {
+    width: 100px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .a {
+    transition: all 300ms ease 0s;
+    transition-duration: 300ms;
+    display: block;
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-5 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    min-height: 20px;
+    min-width: 20px;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) {
+    .div-5 {
+      margin-top: 1px;
+      width: 266%;
+    }
+  }
+  .image {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .image-sizer {
+    width: 100%;
+    padding-top: 100%;
+    pointer-events: none;
+    font-size: 0;
+  }
+  .div-6 {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .form {
+    display: flex;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .input {
+    background-color: rgb(238, 238, 238);
+    border-radius: 20px 0px 0px 20px;
+    border-top-left-radius: 20px;
+    height: 35px;
+    left: 20px;
+    padding-left: 12px;
+    padding-right: 24px;
+    position: relative;
+    z-index: 1;
+    border-bottom: 0px;
+    border-color: rgb(0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  @media (max-width: 640px) {
+    .input {
+      width: 130px;
+      padding-left: 14px;
+      margin-left: 22px;
+    }
+  }
+  .input-2 {
+    background-color: rgba(131, 38, 239, 1);
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100px;
+    z-index: 2;
+    border-bottom: 0px;
+    border-color: rgb(255, 255, 255);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-7 {
+    width: 90px;
+    margin-left: 15px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .a-2 {
+    transition: all 300ms ease 0s;
+    transition-duration: 300ms;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .svg {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .svg-2 {
+    width: 20px;
+    display: none;
+    height: 16px;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .span {
+    font-size: 12px;
+    margin-left: 3px;
+    text-transform: uppercase;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-8 {
+    display: none;
+    left: -10px;
+    padding-top: 20px;
+    position: absolute;
+    top: 17px;
+    width: max-content;
+    z-index: 100;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-9 {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    border-bottom-color: rgb(238, 238, 238);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(238, 238, 238);
+    border-left: 1px solid rgb(238, 238, 238);
+    border-left-color: rgb(238, 238, 238);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right: 1px solid rgb(238, 238, 238);
+    border-right-color: rgb(238, 238, 238);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-top-color: rgb(238, 238, 238);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-width: 1px;
+    width: 200px;
+  }
+  .h5 {
+    color: rgb(130, 130, 130);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-weight: 500;
+    border-bottom: 0px;
+    border-color: rgb(130, 130, 130);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .ul {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .li {
+    padding-bottom: 20px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .a-3 {
+    transition: all 300ms ease 0s;
+    transition-duration: 300ms;
+    align-items: center;
+    display: flex;
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .span-2 {
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 32px;
+    font-size: 12px;
+    margin-left: 3px;
+    text-transform: uppercase;
+    border-bottom: 0px;
+    border-color: rgb(0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .svg-3 {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-bottom: 0px;
+    border-color: rgb(0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .li-2 {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .a-4 {
+    transition: all 300ms ease 0s;
+    transition-duration: 300ms;
+    align-items: center;
+    display: flex;
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+    border-bottom: 0px;
+    border-color: rgb(33, 37, 41);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .span-3 {
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 32px;
+    font-size: 12px;
+    margin-left: 3px;
+    text-transform: uppercase;
+    border-bottom: 0px;
+    border-color: rgb(0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .svg-4 {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-bottom: 0px;
+    border-color: rgb(0, 0, 0);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .div-10 {
+    background-color: rgb(255, 227, 255);
+    margin-left: 15px;
+    position: relative;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+  .a-5 {
+    transition: all 300ms ease 0s;
+    transition-duration: 300ms;
+    color: rgb(205, 64, 167);
+    display: block;
+    font-size: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 0px;
+    border-color: rgb(205, 64, 167);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      document.querySelectorAll("[data-name='image']").forEach((el) => {
+        el.loading = "lazy";
+      });
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
+
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+<a href="/" class="c"><span class="spanc">Create ads</span><a href="https://unlimitednow.live/userdashboardfinal" class="c"><span class="spanc">Go live</span></a><a href="https://my.unlimitednow.site/launch/" class="c"><span class="spanc">My Site</span></a><a href="https://connect.stripe.com/express/oauth/authorize?response_type=code&client_id=ca_LsmBxC6Daetmvv6f4ybRjJlfWEwgfAI9"target="_blank" class="c"><span class="spanc">Get Paid by Unlimit Potential</span></a><a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_LsmBxC6Daetmvv6f4ybRjJlfWEwgfAI9&scope=read_write"target="_blank" class="c"><span class="spanc">Connect your stripe</span></a><a href="https://unlimitednow.app.link/pay"target="_blank" class="c"><span class="spanc">My Payments</span></a><a href="https://unlimitednow.me/wallet/"target="_blank" class="c"><span class="spanc">My Wallet</span></a>
+</a>
+<style>
+  
+  .c {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0;
+    height: auto;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    flex-grow: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    text-decoration: none;
+  }
+  .spanc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    appearance: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgba(131, 38, 239, 1);
+    color: white;
+    border-radius: 83px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+    text-decoration: none;
+  }
+</style>
+
+<div class="row"><iframe id="softr-a0542ce1-ad0b-4ed6-a64e-d84e65ce553b-form2" src="https://creators.unlimitpotential.com/embed/pages/a0542ce1-ad0b-4ed6-a64e-d84e65ce553b/blocks/form2" width="100%" height="300" scrolling="no" frameborder="0" style="border:none;"></iframe>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js"></script>
+  <script> iFrameResize({ checkOrigin: false, log: true }, '#softr-a0542ce1-ad0b-4ed6-a64e-d84e65ce553b-form2');</script>
+
+<iframe id="softr-44ee0afe-59e4-4f45-8607-cfb41380363f-list2" src="https://creators.unlimitpotential.com/embed/pages/44ee0afe-59e4-4f45-8607-cfb41380363f/blocks/list2" width="100%" height="1000" scrolling="no" frameborder="0" style="border:none;"></iframe>    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js"></script>    <script> iFrameResize({ checkOrigin: false, log: true }, '#softr-44ee0afe-59e4-4f45-8607-cfb41380363f-list2');</script>
+
+<script>
+  (function(d, params){
+    const script = d.createElement('script');
+    script.setAttribute('src', 'https://cdn.candu.ai/sdk/latest/candu.umd.js?token=' + params.clientToken);
+    script.onload = () => Candu.init(params);
+    d.head.appendChild(script);
+  })(document, {
+    // OPTIONAL: Provide your userId
+    // userId: 'YOUR_USER_ID',
+    clientToken: 'ki6w6rSFwb',
+   });
+</script>
+  
+<div class="arena-embed-widget" data-publisher="unlimited-now" data-type="social-wall" data-showtitle="true" data-lang="en-us" data-timeline="TNrMKGp"></div><script src="https://go.arena.im/public/js/arena.widget.embed.lib.js"></script>
+
+<div class="div" data-name="div-1">
+  <section class="section">
+    <p><strong>Unlimited Now, Inc.</strong></p>
+    <p>
+      <a
+        href="https://shop.unlimitednow.site/privacy-policy"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Privacy Policy
+      </a>
+    </p>
+  </section>
+</div>
+<style>
+  .div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    text-align: center;
+  }
+  .section {
+    width: 100%;
+    align-self: stretch;
+    flex-grow: 1;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+
+
+<script>
+  (() => {
+    const state = {};
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      document.querySelectorAll("[data-name='div-1']").forEach((el) => {
+        el.maxWidth = 1200;
+      });
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
+<div class="div" data-name="div-1">
+  <section class="section">
+<div class="page">
+  <div class="data">
+    <label>window.Magic.user.getIdToken()</label>
+    <pre id="idToken">Loading...</pre>
+  </div>
+
+  <div class="data">
+    <label>window.Magic.user.getMetadata()</label>
+    <pre id="userMetadata">Loading...</pre>
+  </div>
+
+  <div class="data">
+    <label>window.Magic.oauth.getRedirectResult()</label>
+    <pre id="oauth">Loading...</pre>
+  </div>
+
+  <a href="/logout">Logout</a>
+</div>
+</section>
+</div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzgmpA3LqTd6j0L0R6METr_4PYrX2xGak",
+    authDomain: "unlimited-now.firebaseapp.com",
+    projectId: "unlimited-now",
+    storageBucket: "unlimited-now.appspot.com",
+    messagingSenderId: "595700508262",
+    appId: "1:595700508262:web:3be529489056c3558eafa7",
+    measurementId: "G-VRPRC21J10"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "0c071a6f-d3c8-4feb-b878-7450a2f96e11",
+      safari_web_id: "",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+</html>
