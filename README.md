@@ -9,7 +9,7 @@ Generic Prisma schema example for a SaaS that has a referral system.
 
 ### Setting this project up locally
 
-Once you clone your repo, you'll want to set up this repo for local development. In order to start using Prisma locally, you need to make Prisma aware of your database. The most portable way to do this is to use environment variables via a `.env` file.
+Once you clone your repo, you'lll want to set up[ this repo for local development. In order to start using Prisma locally, you need to make Prisma aware of your database. The most portable way to do this is to use environmfent variables via a `.env` file.
 
 1. You'll see that your Prisma Schema file (at `prisma/schema.prisma`) is already configured to use an environment variable called `DATABASE_URL`. [Read more about environment variables in Prisma](https://www.prisma.io/docs/concepts/more/environment-variables)
 2. You'll need a database to connect to. You may use the same one you used while setting this project up on the Prisma Data Platform, but we recommend setting up a local database and use that during development. If you're new to databases, we recommend [reading up](https://www.prisma.io/dataguide/) on them. This guide also has instructions on how to set up a local database.
