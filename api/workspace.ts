@@ -11,7 +11,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const prisma = new PrismaClient()
 
     console.log(
-      '[account] Incoming request:',
+      '[workspace] Incoming request:',
       JSON.stringify(
         {
           method: req.method,
@@ -26,28 +26,28 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     switch (req.method) {
       case 'GET':
         return res.json(
-          await prisma.account.findMany({
+          await prisma.workspace.findMany({
             where: { id },
           }),
         )
       case 'POST':
         return res.json(
-          await prisma.account.create({
-            data: req.body as Prisma.AccountCreateInput,
+          await prisma.workspace.create({
+            data: req.body as Prisma.WorkspaceCreateInput,
           }),
         )
       case 'PUT':
         return res.json(
-          await prisma.account.update({
+          await prisma.workspace.update({
             where: {
               id,
             },
-            data: req.body as Prisma.AccountUpdateInput,
+            data: req.body as Prisma.WorkspaceUpdateInput,
           }),
         )
       case 'DELETE':
         return res.json(
-          await prisma.account.delete({
+          await prisma.workspace.delete({
             where: { id },
           }),
         )
