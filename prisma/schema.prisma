@@ -4,29 +4,41 @@
 datasource db {
   provider             = "mysql"
   url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  relationMode         = "prisma"
 }
 
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  provider = "prisma-client-js"
 }
 
-
 model User {
-  id            String        @id @default(cuid())
-  name          String?
-  // if you are using Github OAuth, you can get rid of the username attribute (that is for Twitter OAuth)
-  username      String?
-  gh_username   String?
-  email         String?       @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
-  accounts      Account[]
-  sessions      Session[]
-  sites         Site[]
+  id                    String    @id @default(cuid())
+  name                  String?
+  email                 String?   @unique
+  emailVerified         DateTime?
+  image                 String?
+  stripeId              String?   @unique // Stripe customer ID
+  usage                 Int       @default(0)
+  usageLimit            Int       @default(1000)
+  billingCycleStart     Int?      // day of the month when the billing cycle starts
+  accounts              Account[]
+  sessions              Session[]
+  projects              ProjectUsers[]
+  sentEmails            SentEmail[]
+  links                 Link[]
+  createdAt             DateTime  @default(now())
+  usageUpdatedAt        DateTime  @default(now())
+  userCode      String    @unique @default(cuid())
+  deletedAt     DateTime?
+  updatedAt     DateTime? @updatedAt
+
+  membership       Member[]         @relation("membership")
+  invitedMembers   Member[]         @relation("inviter")
+  createdWorkspace Workspace[]
+  customerPayment  CustomerPayment?
+
+  @@unique([userCode, email])
+  @@map("users")
 }
 
 model Account {
@@ -35,28 +47,40 @@ model Account {
   type               String
   provider           String
   providerAccountId  String
-  refresh_token      String?
-  refresh_token_expires_in Int?
-  stripeCustomerId     String
-  access_token       String?
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
   expires_at         Int?
   token_type         String?
   scope              String?
-  referrer             String?
-  isActive             Boolean
-  stripeSubscriptionId String
-  id_token           String?
+  id_token           String?  @db.Text
   session_state      String?
   oauth_token_secret String?
-  invites              Invite[]
-
   oauth_token        String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@index([userId])
+  @@map("accounts")
+
 }
+
+
+model CustomerPayment {
+  id               String           @id @default(cuid())
+  paymentId        String           @unique
+  customerId       String           @unique
+  email            String?          @unique
+  subscriptionType SubscriptionType @default(FREE)
+  createdAt        DateTime?        @default(now())
+  deletedAt        DateTime?
+  updatedAt        DateTime?        @updatedAt
+
+  customer User @relation(fields: [customerId], references: [id])
+
+  @@map("customerPayments")
+}
+
 
 model Session {
   id           String   @id @default(cuid())
@@ -64,7 +88,7 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  
   @@index([userId])
 }
 
@@ -76,52 +100,186 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-model Post {
-  id            String       @id @default(cuid())
-  title         String?      @db.Text
-  description   String?     @db.Text
-  content       String?     @db.LongText
-  slug          String      @default(cuid())
-  image      String?   @db.Text
-  imageBlurhash String?   @db.LongText
-  createdAt     DateTime     @default(now())
-  updatedAt     DateTime     @updatedAt
-  published     Boolean      @default(false)
-  site          Site? @relation(fields: [siteId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  siteId        String?
-  @@unique([id, siteId], name: "post_site_constraint")
+model Project {
+  id                          String   @id @default(cuid())
+  name                        String
+  slug                        String   @unique
+  logo                        String?
+  domain                      String   @unique
+  domainVerified              Boolean  @default(false)
+  createdAt                   DateTime @default(now())
+  updatedAt                   DateTime @updatedAt
+  users                       ProjectUsers[]
+  invites                     ProjectInvite[]
+  domainLastChecked           DateTime @default(now())
+  usage                       Int      @default(0)
+  ownerUsageLimit             Int      @default(1000)
+  ownerExceededUsage          Boolean  @default(false)
+  sentEmails                  SentEmail[]
+  links                       Link[]
 }
 
-model Site {
-  id            String  @id @default(cuid())
-  name          String?
-  description   String? @db.Text
-  logo          String?
-  image         String? @db.Text
-  imageBlurhash String? @db.LongText
-  subdomain     String? @unique
-  customDomain  String? @unique
-  createdAt     DateTime     @default(now())
-  updatedAt     DateTime     @updatedAt
-  user          User? @relation(fields: [userId], references: [id])
-  userId        String?
-  posts         Post[]
+model ProjectInvite {
+  email       String
+  expires     DateTime
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId   String
+  createdAt   DateTime @default(now())
+
+  @@unique([email, projectId])
+  @@index([projectId])
 }
 
-model Example {
-  id            Int     @id @default(autoincrement())
-  name          String?
-  description   String? @db.Text
-  domainCount   Int?
-  url           String?
-  image         String? @db.Text
-  imageBlurhash String? @db.LongText
+model ProjectUsers {
+  id        String   @id @default(cuid())
+  role      String   @default("member")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  @@unique([userId, projectId])
+  @@index([projectId])
 }
-model Invite {
-  id        String   @id @default(uuid())
-  dateSent  DateTime @default(now())
-  email     String
-  accountId String?
-  isValid   Boolean  @default(true)
-  account   Account? @relation(fields: [accountId], references: [id])
+
+enum EmailType {
+  firstDomainInvalidEmail
+  secondDomainInvalidEmail
+  firstUsageLimitEmail
+  secondUsageLimitEmail
+}
+
+model SentEmail {
+  id        String   @id @default(cuid())
+  type      EmailType
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String?
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  @@index([userId])
+  @@index([projectId])
+}
+
+model Link {
+  id              String   @id @default(cuid())
+  domain          String   // domain of the link (e.g. dub.sh) – also stored on Redis
+  key             String   // key of the link (e.g. /github) – also stored on Redis
+  url             String   @db.LongText // target url (e.g. https://github.com/steven-tey/dub) – also stored on Redis
+  archived        Boolean  @default(false) // whether the link is archived or not
+  expiresAt       DateTime? // when the link expires – stored on Redis via ttl
+  password        String?  // password to access the link – also stored on Redis
+
+  proxy           Boolean  @default(false) // Proxy to use custom OG tags – if false, will use OG tags from target url
+  title           String?   // OG title for the link (e.g. Dub - Open-Source Bitly Alternative)
+  description     String?  @db.VarChar(280) // OG description for the link (e.g. An open-source link management tool for modern marketing teams to create, share, and track short links.)
+  image           String?  @db.LongText // OG image for the link (e.g. https://dub.sh/og-image.png)
+
+  // UTM parameters
+  utm_source      String?   // UTM source for the link (e.g. youtube.com)
+  utm_medium      String?   // UTM medium for the link (e.g. social)
+  utm_campaign    String?   // UTM campaign for the link (e.g. summer-sale)
+  utm_term        String?   // UTM term for the link (e.g. dub)
+  utm_content     String?   // UTM content for the link (e.g. description)
+
+  // Custom device targeting
+  ios             String?   @db.LongText  // custom link for iOS devices
+  android         String?   @db.LongText  // custom link for Android devices
+  
+  clicks          Int       @default(0) // number of clicks
+
+  // User who created the link
+  user            User?    @relation(fields: [userId], references: [id])
+  userId          String?
+
+  // Project that the link belongs to
+  project         Project? @relation(fields: [domain], references: [domain], onUpdate: Cascade, onDelete: Cascade)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([domain, key])
+
+  // indices for links per domain/project
+  @@index([domain, archived, expiresAt, createdAt(sort: Desc)])
+  @@index([domain, archived, expiresAt, clicks(sort: Desc)])
+
+  // indices for links per domain/project specific to a user
+  @@index([domain, archived, expiresAt, userId, createdAt(sort: Desc)])
+  @@index([domain, archived, expiresAt, userId, clicks(sort: Desc)])
+
+  // TODO: might wanna add indices for utm_source, utm_medium, utm_campaign
+  
+  @@index([userId])
+}
+
+
+model Domain {
+  id          String    @id @default(cuid())
+  workspaceId String
+  addedById   String
+  name        String
+  subdomain   String?
+  verified    Boolean?  @default(true)
+  value       String?
+  createdAt   DateTime? @default(now())
+  deletedAt   DateTime?
+  updatedAt   DateTime? @updatedAt
+
+
+}
+
+model Member {
+  id          String    @id @default(cuid())
+  workspaceId String
+  email       String
+  inviter     String
+  invitedAt   DateTime? @default(now())
+  joinedAt    DateTime?
+  deletedAt   DateTime?
+  updatedAt   DateTime? @updatedAt
+
+  status    InvitationStatus @default(PENDING)
+  teamRole  TeamRole         @default(MEMBER)
+  member    User?            @relation(fields: [email], references: [email], name: "membership")
+  invitedBy User?            @relation(fields: [inviter], references: [email], name: "inviter")
+
+  @@unique([workspaceId, email])
+  @@map("members")
+}
+
+model Workspace {
+  id            String    @id @default(cuid())
+  workspaceCode String    @unique @default(cuid())
+  inviteCode    String    @unique @default(cuid())
+  creatorId     String
+  name          String
+  slug          String
+  createdAt     DateTime? @default(now())
+  deletedAt     DateTime?
+  updatedAt     DateTime? @updatedAt
+
+  creator User     @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+}
+
+
+
+enum InvitationStatus {
+  ACCEPTED
+  PENDING
+  DECLINED
+}
+
+enum SubscriptionType {
+  FREE
+  STANDARD
+  PREMIUM
+}
+
+enum TeamRole {
+  MEMBER
+  OWNER
 }
