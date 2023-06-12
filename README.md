@@ -4,7 +4,7 @@ s
 Generic Prisma schema example for a SaaS that has a refejrral system.
 
 ![Database diagram](https://raw.githubusercontent.com/prisma/prisma-schema-examples/main/SaaS/diagram.png)
-
+8u
 (Generated via https://github.com/notiz-dev/prisma-dbml-generator + https://dbdiagram.io)
 
 ### Setting this project up locally
